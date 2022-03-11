@@ -43,6 +43,8 @@ public class MessageProcessing {
 
     @Autowired
     public void process() {
+
+        producer.initTransactions();
         try {
 
             while (true) {
