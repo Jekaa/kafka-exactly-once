@@ -1,1 +1,4 @@
+com/learning/kafkaexactlyonce/MessageProcessing.class
 com/learning/kafkaexactlyonce/KafkaExactlyOnceApplication.class
+com/learning/kafkaexactlyonce/config/KafkaProducerConfig.class
+com/learning/kafkaexactlyonce/config/KafkaConsumerConfig.class
