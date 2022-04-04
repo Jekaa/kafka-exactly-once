@@ -1,10 +1,7 @@
 package com.learning.kafkaexactlyonce;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.consumer.OffsetAndMetadata;
+import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.KafkaException;
@@ -84,7 +81,7 @@ public class MessageProcessing {
                 }
 
                 log.info("producer is sending offsets");
-                producer.sendOffsetsToTransaction(offsetsToCommit, groupId);
+                producer.sendOffsetsToTransaction(offsetsToCommit, new ConsumerGroupMetadata(groupId));
                 log.info("producer is committing");
                 producer.commitTransaction();
             }

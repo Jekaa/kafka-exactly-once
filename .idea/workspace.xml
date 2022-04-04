@@ -24,13 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39e08ff8-8c05-4b4a-8eb5-25eef45544a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/kafkaexactlyonce/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/kafkaexactlyonce/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/kafkaexactlyonce/KafkaExactlyOnceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/kafkaexactlyonce/KafkaExactlyOnceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/kafkaexactlyonce/MessageProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/kafkaexactlyonce/MessageProcessing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646995013723</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add producer initTransactions">
+      <created>1647004456093</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647004456093</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,11 +122,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="realize" />
-    <option name="LAST_COMMIT_MESSAGE" value="realize" />
+    <MESSAGE value="add producer initTransactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add producer initTransactions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1646997187715">
@@ -135,132 +139,60 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="626" y="256" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1646987172606" />
-    <state width="1750" height="392" key="GridCell.Tab.0.bottom" timestamp="1647004053064">
+    <state x="100" y="123" width="1592" height="813" key="DiffContextDialog" timestamp="1649107402665">
+      <screen x="0" y="23" width="1792" height="1013" />
+    </state>
+    <state x="100" y="123" width="1592" height="813" key="DiffContextDialog/0.23.1792.1013@0.23.1792.1013" timestamp="1649107402665" />
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1647100815514">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053064" />
-    <state width="1750" height="392" key="GridCell.Tab.0.center" timestamp="1647004053061">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1647100815514" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1647100815513">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053061" />
-    <state width="1750" height="392" key="GridCell.Tab.0.left" timestamp="1647004053060">
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1038@0.0.1792.1038" timestamp="1647010246590" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1647100815513" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1647100815512">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053060" />
-    <state width="1750" height="392" key="GridCell.Tab.0.right" timestamp="1647004053063">
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1038@0.0.1792.1038" timestamp="1647010246589" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1647100815512" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1647100815513">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053063" />
-    <state width="1750" height="392" key="GridCell.Tab.1.bottom" timestamp="1647004053069">
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1038@0.0.1792.1120" timestamp="1647010246620" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1647100815513" />
+    <state width="1750" height="392" key="GridCell.Tab.1.bottom" timestamp="1647010246634">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053069" />
-    <state width="1750" height="392" key="GridCell.Tab.1.center" timestamp="1647004053067">
+    <state width="1750" height="392" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1647010246634" />
+    <state width="1750" height="392" key="GridCell.Tab.1.center" timestamp="1647010246632">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053067" />
-    <state width="1750" height="392" key="GridCell.Tab.1.left" timestamp="1647004053065">
+    <state width="1750" height="392" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1647010246632" />
+    <state width="1750" height="392" key="GridCell.Tab.1.left" timestamp="1647010246631">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053065" />
-    <state width="1750" height="392" key="GridCell.Tab.1.right" timestamp="1647004053068">
+    <state width="1750" height="392" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1647010246631" />
+    <state width="1750" height="392" key="GridCell.Tab.1.right" timestamp="1647010246633">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1647004053068" />
+    <state width="1750" height="392" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1647010246633" />
     <state x="434" y="222" key="Maven.ArtifactSearchDialog" timestamp="1646994606561">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="434" y="222" key="Maven.ArtifactSearchDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1646994606561" />
-    <state x="597" y="286" width="598" height="548" key="find.popup" timestamp="1646997590378">
+    <state x="433" y="296" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1647004164792">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="597" y="286" width="598" height="548" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1646997590378" />
+    <state x="433" y="296" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1792.1120@0.0.1792.1120" timestamp="1647004164792" />
+    <state x="597" y="282" width="598" height="496" key="find.popup" timestamp="1649107100370">
+      <screen x="0" y="23" width="1792" height="1013" />
+    </state>
+    <state x="597" y="286" width="598" height="548" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1647010417320" />
+    <state x="597" y="282" width="598" height="496" key="find.popup/0.23.1792.1013@0.23.1792.1013" timestamp="1649107100370" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/KafkaProducer.class</url>
-          <line>277</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>148</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>149</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>150</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/KafkaProducer.class</url>
-          <line>278</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/KafkaProducer.class</url>
-          <line>279</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>756</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>757</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>760</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>761</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>764</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>771</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>773</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>776</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>758</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.0.0/kafka-clients-3.0.0.jar!/org/apache/kafka/clients/producer/internals/TransactionManager.class</url>
-          <line>1438</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="this.currentState.name()" language="JAVA" />
